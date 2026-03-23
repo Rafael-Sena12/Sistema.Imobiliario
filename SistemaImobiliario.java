@@ -75,6 +75,40 @@ public class SistemaImobiliario {
     }
 
     private static void calcularComissoes() {
+         if(transacoes.isEmpty()) {
+                IO.println("\nNenhuma transação realizada!\n");
+                return;
+            }
+
+            IO.println("\nCOMISSÕES DOS FUNCIONÁRIOS \n");
+
+            for(Funcionario f : funcionarios) {
+                double totalComissao = 0;
+                int totalVendas = 0;
+
+                for(Transacao t : transacoes) {
+                    if(t.getFuncionario().equals(f)) {
+                        if(t instanceof Venda) {
+                            Venda venda = (Venda) t;
+                            totalComissao += venda.getComissaoFuncionario();
+                            totalVendas++;
+                        }
+                        else if(t instanceof Aluguel) {
+                            Aluguel aluguel = (Aluguel) t;
+                            totalComissao += aluguel.getComissaoFuncionario();
+                            totalVendas++;
+                        }
+                    }
+                }
+
+                if(totalVendas > 0) {
+                    IO.println(f.getNome() + " - " + totalVendas + " transações");
+                    IO.println("  Comissão total: R$ " + String.format("%.2f", totalComissao));
+                    IO.println();
+                }
+            }
+
+
     }
 
     private static void listarTransacoes() {
