@@ -16,6 +16,14 @@ public class Aluguel extends Transacao {
         this.dataFim = dataFim;
     }
 
+    public void setDataInicio(LocalDate dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public void setDataFim(LocalDate dataFim) {
+        this.dataFim = dataFim;
+    }
+
     @Override
     public void calcularComissaoFuncionario() {
         this.comissaoFuncionario = valorTotal * 0.05;

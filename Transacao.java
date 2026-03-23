@@ -25,12 +25,67 @@ public abstract class Transacao {
         calcularComissaoFuncionario();
     }
 
+    public void setNumeroContrato(int numeroContrato) {
+        this.numeroContrato = numeroContrato;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
+
+    public ClienteUsuario getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteUsuario cliente) {
+        this.cliente = cliente;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public LocalDate getDataTransacao() {
+        return dataTransacao;
+    }
+
+    public void setDataTransacao(LocalDate dataTransacao) {
+        this.dataTransacao = dataTransacao;
+    }
+
+    public String getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(String formaPagamento) {
+        this.formaPagamento = formaPagamento;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public double getComissaoFuncionario() {
+        return comissaoFuncionario;
+    }
+
+    public void setComissaoFuncionario(double comissaoFuncionario) {
+        this.comissaoFuncionario = comissaoFuncionario;
+    }
+
     public abstract void calcularComissaoFuncionario();
 
     public void finalizarTransacao() {
         funcionario.adicionarComissao(comissaoFuncionario);
     }
 
-    public int getNumeroContrato() { return numeroContrato; }
-    public Imovel getImovel() { return imovel; }
+
 }

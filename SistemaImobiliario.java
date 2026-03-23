@@ -21,18 +21,18 @@ public class SistemaImobiliario {
 
         int opcao;
         do {
-            IO.print("  SISTEMA IMOBILIÁRIO ");
-            IO.print("1. Cadastrar Proprietário");
-            IO.print("2. Cadastrar Cliente Usuário");
-            IO.print("3. Cadastrar Funcionário");
-            IO.print("4. Cadastrar Imóvel");
-            IO.print("5. Listar Imóveis Disponíveis");
-            IO.print("6. Realizar Venda");
-            IO.print("7. Realizar Aluguel");
-            IO.print("8. Listar Transações");
-            IO.print("9. Calcular Comissões");
-            IO.print("0. Sair");
-            IO.print("Escolha uma opção: ");
+            System.out.println("\n=== SISTEMA IMOBILIÁRIO ===");
+            IO.println("1. Cadastrar Proprietário");
+            IO.println("2. Cadastrar Cliente Usuário");
+            IO.println("3. Cadastrar Funcionário");
+            IO.println("4. Cadastrar Imóvel");
+            IO.println("5. Listar Imóveis Disponíveis");
+            IO.println("6. Realizar Venda");
+            IO.println("7. Realizar Aluguel");
+            IO.println("8. Listar Transações");
+            IO.println("9. Calcular Comissões");
+            IO.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -133,7 +133,7 @@ public class SistemaImobiliario {
         ClienteUsuario usuario = new ClienteUsuario(cpf, nome, endereco, email,
                 sexo, estadoCivil, profissao);
 
-        IO.print("Telefone para contato: ");
+        IO.println("Telefone para contato: ");
         String telefone = scanner.nextLine();
         usuario.adicionarTelefone(telefone);
 

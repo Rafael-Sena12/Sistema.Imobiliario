@@ -22,6 +22,14 @@ public class ClienteUsuario extends Cliente {
         indicacoes.add(indicacao);
     }
 
+    public void setFiadores(List<String> fiadores) {
+        this.fiadores = fiadores;
+    }
+
+    public void setIndicacoes(List<String> indicacoes) {
+        this.indicacoes = indicacoes;
+    }
+
     public List<String> getFiadores() { return fiadores; }
     public List<String> getIndicacoes() { return indicacoes; }
 }

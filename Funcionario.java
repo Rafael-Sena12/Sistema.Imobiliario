@@ -25,6 +25,54 @@ public class Funcionario extends Pessoa {
         this.senha = senha;
     }
 
+    public String getTelefoneCelular() {
+        return telefoneCelular;
+    }
+
+    public void setTelefoneCelular(String telefoneCelular) {
+        this.telefoneCelular = telefoneCelular;
+    }
+
+    public LocalDate getDataIngresso() {
+        return dataIngresso;
+    }
+
+    public void setDataIngresso(LocalDate dataIngresso) {
+        this.dataIngresso = dataIngresso;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public void setTotalComissao(double totalComissao) {
+        this.totalComissao = totalComissao;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public void adicionarComissao(double valorComissao) {
         this.totalComissao += valorComissao;
     }

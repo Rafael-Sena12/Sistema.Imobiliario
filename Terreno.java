@@ -3,10 +3,9 @@ package imobiliaria;
 import java.time.LocalDate;
 
 public class Terreno extends Imovel {
-    private double area;
-    private double largura;
-    private double comprimento;
-    private String acliveDeclive;
+    protected double largura;
+    protected double comprimento;
+    protected String acliveDeclive;
 
     public Terreno(String codigo, Endereco endereco, LocalDate dataConstrucao,
                    double valorSugerido, ClienteProprietario proprietario,
@@ -15,6 +14,30 @@ public class Terreno extends Imovel {
         this.area = area;
         this.largura = largura;
         this.comprimento = comprimento;
+        this.acliveDeclive = acliveDeclive;
+    }
+
+    public double getLargura() {
+        return largura;
+    }
+
+    public void setLargura(double largura) {
+        this.largura = largura;
+    }
+
+    public double getComprimento() {
+        return comprimento;
+    }
+
+    public void setComprimento(double comprimento) {
+        this.comprimento = comprimento;
+    }
+
+    public String getAcliveDeclive() {
+        return acliveDeclive;
+    }
+
+    public void setAcliveDeclive(String acliveDeclive) {
         this.acliveDeclive = acliveDeclive;
     }
 

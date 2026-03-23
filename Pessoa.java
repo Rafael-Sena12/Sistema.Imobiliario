@@ -31,6 +31,38 @@ public abstract class Pessoa {
         telefones.add(telefone);
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setTelefones(List<String> telefones) {
+        this.telefones = telefones;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+
     public String getCpf() { return cpf; }
     public String getNome() { return nome; }
     public Endereco getEndereco() { return endereco; }
